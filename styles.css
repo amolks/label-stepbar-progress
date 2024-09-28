@@ -1,0 +1,230 @@
+:root {
+    --primary-color: #7453e0;
+    --text-color: #21d9bb;
+    --text-grey-color: #ccc;
+    --progress-bg: #ccc;
+    --contras-color: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+}
+
+h1,
+h2 {
+    color: #000;
+    text-align: center;
+}
+
+h1 {
+    color: #434d77;
+    background-image: -webkit-linear-gradient(0deg, #434d77 2%, #f44336 32%, #a545ff 55%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+h2 {
+    font-size: 1.1rem;
+    color: #2f2f2f;
+
+}
+
+h2 small{
+    font-size: .7rem;
+}
+
+p{
+    text-align: center;
+    font-size: .9rem;
+    color: #2f2f2f;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1180px;
+}
+
+
+
+.progress-bar {
+    margin: 50px 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.progress-bar[data-label-position="top"] {
+    flex-direction: column-reverse;
+}
+
+ul.progressbar-top {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+}
+
+ul.progressbar-top li {
+    flex: 1;
+    text-align: center;
+}
+
+
+.progressbar {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+
+.progressbar li {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    color: var(--text-color);
+}
+
+.progressbar li:before {
+    width: 12px;
+    height: 12px;
+    content: '';
+    border: 3px solid var(--text-grey-color);
+    background-color: #fff;
+    display: block;
+    text-align: center;
+    margin: 0px auto 0px auto;
+    border-radius: 50%;
+    -webkit-transition: all 4.4s ease-in-out;
+    -moz-transition: all 4.4s ease-in-out;
+    -o-transition: all 4.4s ease-in-out;
+    transition: all 4.4s ease-in-out
+}
+
+.progressbar li.changed:before {
+    background-color: var(--text-color);
+    border-color: var(--text-color);
+}
+
+.progressbar li.active:before {
+    background-color: var(--contras-color);
+    border-color: var(--primary-color);
+}
+
+.progressbar li span {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    top: 2px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.progressbar li span{
+    color: var(--text-grey-color)
+}
+.progressbar li.active span{
+    color: var(--primary-color);
+}
+.progressbar li.changed span{
+    color:var(--contras-color);
+}
+
+.progressbar-top li,
+.progressbar-top li a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+
+.progressbar-top li.changed,
+.progressbar-top li.changed a {
+    color: var(--text-color);
+}
+
+.progressbar-top li.active,
+.progressbar-top li.active a {
+    color: var(--primary-color);
+}
+
+.progressbar-top li:not(.changed):not(.active),
+.progressbar-top li:not(.changed):not(.active) a,
+.progressbar-top li:not(.changed):not(.active) a {
+    color: var(--text-grey-color);
+    opacity: .9;
+    pointer-events: none;
+    outline: none;
+}
+
+ul.progressbar-top li a {
+    flex: 1;
+    text-align: center;
+}
+
+.progressbar-indicator {
+    position: relative;
+    margin: 5px 0;
+}
+
+progress {
+    width: -webkit-fill-available;
+    height: 3px;
+    appearance: none;
+    margin-top: 0;
+    bottom: 7px;
+    position: absolute;
+}
+
+progress[value]::-webkit-progress-value {
+    /**
+     * Defines the background color for the progress bar.
+     */
+    background: #a0eab2;
+    background: linear-gradient(90deg, #21d9bb 0%, #7453e0 33%, #21d9bb 66%, #7453e0 100%);
+    background-size: 300% 100%;
+    -webkit-transition: all 3.4s ease-in-out;
+    -moz-transition: all 3.4s ease-in-out;
+    -o-transition: all 3.4s ease-in-out;
+    transition: all 3.4s ease-in-out
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--progress-bg);
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--primary-color);
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--primary-color);
+}
+
+@media (max-width: 767px) {
+
+    .progressbar-top li,
+    .progressbar-top li a {
+        font-size: .7rem;
+    }
+
+    .progress-bar-container {
+        margin: 10px auto;
+        padding: 10px;
+    }
+}

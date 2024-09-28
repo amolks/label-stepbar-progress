@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Progress Bar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Multi-Step Progress Tracker</h1>
+
+        <!-- First Progress Bar -->
+        <h2>Progress Tracker (Labels Below)</h2>
+        <p>Track your progress through a series of steps with labels displayed at the bottom.</p>
+        <div class="progress-bar" data-default-step="1" data-label-position="bottom">
+            <div class="progressbar-indicator">
+                <ul class="progressbar">
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                </ul>
+                <progress class="progress-bar-element" value="0" min="0" max="100"></progress>
+            </div>
+            <ul class="progressbar-top">
+                <li><a href="#">Step 1: Introduction</a></li>
+                <li><a href="#">Step 2: Details</a></li>
+                <li><a href="#">Step 3: Confirmation</a></li>
+                <li><a href="#">Step 4: Complete</a></li>
+            </ul>
+        </div>
+
+        <!-- Second Progress Bar -->
+        <h2>Progress Tracker (Labels Above)</h2>
+        <p>Track your progress with labels displayed at the top for easy reference.</p>
+        <div class="progress-bar" data-default-step="2" data-label-position="top">
+            <div class="progressbar-indicator">
+                <ul class="progressbar">
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                </ul>
+                <progress class="progress-bar-element" value="0" min="0" max="100"></progress>
+            </div>
+            <ul class="progressbar-top">
+                <li><a href="#">Step 1: Introduction</a></li>
+                <li><a href="#">Step 2: Details</a></li>
+                <li><a href="#">Step 3: Confirmation</a></li>
+                <li><a href="#">Step 4: Complete</a></li>
+            </ul>
+        </div>
+
+        <!-- Third Progress Bar -->
+        <h2>Progress Tracker with Step Numbers (Labels Above)</h2>
+        <p>Each step is numbered to show your progress alongside descriptive labels.</p>
+        <div class="progress-bar" data-default-step="3" data-label-position="top">
+            <div class="progressbar-indicator">
+                <ul class="progressbar">
+                    <li><span>1</span></li>
+                    <li><span>2</span></li>
+                    <li><span>3</span></li>
+                    <li><span>4</span></li>
+                </ul>
+                <progress class="progress-bar-element" value="0" min="0" max="100"></progress>
+            </div>
+            <ul class="progressbar-top">
+                <li><a href="#">Step 1: Introduction</a></li>
+                <li><a href="#">Step 2: Details</a></li>
+                <li><a href="#">Step 3: Confirmation</a></li>
+                <li><a href="#">Step 4: Complete</a></li>
+            </ul>
+        </div>
+        <!-- Fourth Progress Bar -->
+        <h2>Progress Tracker with Step Numbers (Labels Below)</h2>
+        <p>Numbered steps with labels displayed below for an alternative layout.</p>
+        <div class="progress-bar" data-default-step="4" data-label-position="bottom">
+            <div class="progressbar-indicator">
+                <ul class="progressbar">
+                    <li><span>1</span></li>
+                    <li><span>2</span></li>
+                    <li><span>3</span></li>
+                    <li><span>4</span></li>
+                </ul>
+                <progress class="progress-bar-element" value="0" min="0" max="100"></progress>
+            </div>
+            <ul class="progressbar-top">
+                <li><a href="#">Step 1: Introduction</a></li>
+                <li><a href="#">Step 2: Details</a></li>
+                <li><a href="#">Step 3: Confirmation</a></li>
+                <li><a href="#">Step 4: Complete</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="stepbar-progress.js"></script>
+</body>
+
+</html>
