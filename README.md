@@ -19,6 +19,9 @@ This project is a simple multi-step progress bar built with HTML, CSS, and JavaS
 
 You can see the live demo of the project by opening the `index.html` file in your browser.
 
+## Live demo 
+https://codepen.io/amol-kshirsagar/full/oNKXJaR
+
 ## Project Structure
 
 ```bash
